@@ -9,6 +9,14 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('THM Portfolio', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.green,
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/thm_background.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
       ),
       drawer: Drawer(
         child: ListView(
@@ -21,30 +29,35 @@ class HomePage extends StatelessWidget {
               ),
             ),
             ListTile(
+              leading: Icon(Icons.person),
               title: const Text('Über mich'),
               onTap: () {
                 Navigator.pushNamed(context, '/about');
               },
             ),
             ListTile(
+              leading: Icon(Icons.star),
               title: const Text('Fähigkeiten'),
               onTap: () {
                 Navigator.pushNamed(context, '/skills');
               },
             ),
             ListTile(
+              leading: Icon(Icons.work),
               title: const Text('Projekte'),
               onTap: () {
                 Navigator.pushNamed(context, '/projects');
               },
             ),
             ListTile(
+              leading: Icon(Icons.contact_mail),
               title: const Text('Kontakt'),
               onTap: () {
                 Navigator.pushNamed(context, '/contact');
               },
             ),
             ListTile(
+              leading: Icon(Icons.description),
               title: const Text('Lebenslauf'),
               onTap: () {
                 Navigator.pushNamed(context, '/resume');
@@ -53,30 +66,24 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/thm_background.png'), // Füge ein passendes Bild hinzu
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: Center(
+      body: Center(
+        child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const CircleAvatar(
                 radius: 50,
-                backgroundImage: AssetImage('assets/images/profile_picture.jpg'), // Dein Profilbild
+                backgroundImage: AssetImage('assets/images/profile_picture.jpg'),
               ),
               const SizedBox(height: 20),
               const Text(
                 'Ufuk Bahar',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
               ),
               const SizedBox(height: 10),
               const Text(
                 'Student an der THM Friedberg',
-                style: TextStyle(fontSize: 18, color: Colors.white),
+                style: TextStyle(fontSize: 18, color: Colors.black),
               ),
               const SizedBox(height: 20),
               ElevatedButton(
@@ -84,7 +91,7 @@ class HomePage extends StatelessWidget {
                   Navigator.pushNamed(context, '/about');
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green, // Verwende backgroundColor anstelle von primary
+                  backgroundColor: Colors.green,
                 ),
                 child: const Text('Mehr über mich erfahren'),
               ),

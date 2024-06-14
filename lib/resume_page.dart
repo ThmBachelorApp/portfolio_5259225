@@ -9,27 +9,30 @@ class ResumePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Lebenslauf', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.green,
-      ),
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/thm_background.png'),
-            fit: BoxFit.cover,
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/thm_background.png'),
+              fit: BoxFit.cover,
+            ),
           ),
         ),
+      ),
+      body: Container(
+        color: Colors.grey[200], // Leicht hellgrauer Hintergrund
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const Text('Ufuk Bahar', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
+              sectionTitle('Ufuk Bahar'),
               const SizedBox(height: 16),
-              const Text('Berufserfahrung', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
+              sectionTitle('Berufserfahrung'),
               const SizedBox(height: 8),
               buildExperience(
                 company: 'S-Country Desk GmbH',
                 location: 'Bad Homburg, Deutschland',
-                role: 'Student – Digitale Welt',
+                role: 'PO Digitale Welt',
                 duration: 'Okt 2017 – heute',
                 details: const [
                   'Mitarbeit an der Weiterentwicklung der App und der Webseite',
@@ -40,7 +43,7 @@ class ResumePage extends StatelessWidget {
               buildExperience(
                 company: 'Fresenius Kabi Deutschland GmbH',
                 location: 'Bad Homburg, Deutschland',
-                role: 'Student – Global IT – Business Intelligence and Master Data',
+                role: 'Global IT – Business Intelligence and Master Data',
                 duration: 'Nov 2016 – Sep 2017',
                 details: const [
                   'Mitarbeit in Projekten zur Implementierung eines Data-Warehouse',
@@ -78,7 +81,7 @@ class ResumePage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 16),
-              const Text('Akademische Laufbahn', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
+              sectionTitle('Akademische Laufbahn'),
               const SizedBox(height: 8),
               buildEducation(
                 institution: 'Technische Hochschule Mittelhessen',
@@ -105,7 +108,7 @@ class ResumePage extends StatelessWidget {
                 duration: 'Jun 2009 – Mai 2011',
               ),
               const SizedBox(height: 16),
-              const Text('Kenntnisse und Fähigkeiten', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
+              sectionTitle('Kenntnisse und Fähigkeiten'),
               const SizedBox(height: 8),
               buildSkills(
                 skills: const [
@@ -116,12 +119,23 @@ class ResumePage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 16),
-              const Text('Interessen', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
+              sectionTitle('Interessen'),
               const SizedBox(height: 8),
-              const Text('VWI Hochschulverein, Reisen und entdecken neuer Kulturen.'),
+              const Text('VWI Hochschulverein, Reisen und entdecken neuer Kulturen.', style: TextStyle(color: Colors.black)),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget sectionTitle(String title) {
+    return Text(
+      title,
+      style: const TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
       ),
     );
   }
@@ -136,10 +150,10 @@ class ResumePage extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('$role, $company', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
-        Text(location, style: const TextStyle(color: Colors.white)),
-        Text(duration, style: const TextStyle(color: Colors.white)),
-        for (var detail in details) Text('• $detail', style: const TextStyle(color: Colors.white)),
+        Text('$role, $company', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black)),
+        Text(location, style: const TextStyle(color: Colors.black)),
+        Text(duration, style: const TextStyle(color: Colors.black)),
+        for (var detail in details) Text('• $detail', style: const TextStyle(color: Colors.black)),
         const SizedBox(height: 8),
       ],
     );
@@ -154,9 +168,9 @@ class ResumePage extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('$degree, $institution', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
-        Text(location, style: const TextStyle(color: Colors.white)),
-        Text(duration, style: const TextStyle(color: Colors.white)),
+        Text('$degree, $institution', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black)),
+        Text(location, style: const TextStyle(color: Colors.black)),
+        Text(duration, style: const TextStyle(color: Colors.black)),
         const SizedBox(height: 8),
       ],
     );
@@ -165,7 +179,7 @@ class ResumePage extends StatelessWidget {
   Widget buildSkills({required List<String> skills}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: skills.map((skill) => Text('• $skill', style: const TextStyle(color: Colors.white))).toList(),
+      children: skills.map((skill) => Text('• $skill', style: const TextStyle(color: Colors.black))).toList(),
     );
   }
 }

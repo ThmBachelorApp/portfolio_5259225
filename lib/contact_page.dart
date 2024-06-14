@@ -9,6 +9,14 @@ class ContactPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Kontakt', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.green,
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/thm_background.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -18,7 +26,7 @@ class ContactPage extends StatelessWidget {
           ),
         ),
         child: Center(
-          child: Padding(
+          child: SingleChildScrollView(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
