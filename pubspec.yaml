@@ -1,0 +1,34 @@
+name: portfolio_5259225
+description: Ein neues Flutter-Projekt.
+
+publish_to: 'none' # Veröffentliche dieses Paket nicht.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  url_launcher: ^6.1.7
+  collection: ^1.18.0
+  flutter_lints: ^4.0.0
+  leak_tracker: ^10.0.4
+  leak_tracker_flutter_testing: ^3.0.3
+  lints: ^4.0.0
+  material_color_utilities: ^0.8.0
+  meta: ^1.12.0
+  test_api: 0.7.0  # Angepasste Version
+  vm_service: 14.2.1  # Angepasste Version
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/thm_background.png
+    - assets/images/profile_picture..jpg
