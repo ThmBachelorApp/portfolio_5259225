@@ -2,6 +2,6 @@
 
 Name: Ufuk Bahar
 
-[Screenshots Aufgabe 2](screenshots/screenshot1.png)
-[Projekt Dokumentation](docs/Dokumentation.docs)
+[Screenshots Aufgabe 2](screenshots)
+[Projekt Dokumentation](docs)
 
