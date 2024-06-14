@@ -38,7 +38,9 @@ class AboutPage extends StatelessWidget {
                   onPressed: () {
                     showPopup(context, 'Mehr erfahren', 'Weitere Informationen über Ufuk Bahar...');
                   },
-                  style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                  ),
                   child: const Text('Mehr erfahren'),
                 ),
               ],
