@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "824598016811",
+    "firebase_url": "https://egb5259225-22db2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "egb5259225-22db2",
+    "storage_bucket": "egb5259225-22db2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824598016811:android:efd648b5bab9c69682cb6e",
+        "android_client_info": {
+          "package_name": "com.thm.portfolio5259225"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAlJ-XY8jTgyQML-e-WeLpr6IiUekeBWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

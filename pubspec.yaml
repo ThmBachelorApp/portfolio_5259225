@@ -21,14 +21,27 @@ dependencies:
   meta: ^1.12.0
   test_api: 0.7.0  # Angepasste Version
   vm_service: 14.2.1  # Angepasste Version
-  syncfusion_flutter_charts: ^20.2.45
+  syncfusion_flutter_charts: ^26.1.42
+  firebase_core: 3.2.0
+  firebase_auth: 5.1.2
+  cloud_firestore: 5.1.0
+  cupertino_icons: ^1.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: ^2.4.0
+  build_web_compilers: ^4.0.4
 
 flutter:
   uses-material-design: true
 
   assets:
     - assets/images/thm_background.png
-    - assets/images/profile_picture..jpg
+    - assets/images/profile_picture.jpg
+    - assets/icons/apple-touch-icon.png
+    - assets/icons/favicon-16x16.png
+    - assets/icons/favicon-32x32.png
+    - assets/icons/favicon.ico
+    - assets/icons/android-chrome-192x192.png
+    - assets/icons/android-chrome-512x512.png
