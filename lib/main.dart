@@ -10,13 +10,9 @@ import 'resume_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  try {
-    await Firebase.initializeApp(
-      options: firebaseOptions,
-    );
-  } catch (e) {
-    print('Firebase initialization error: $e');
-  }
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
